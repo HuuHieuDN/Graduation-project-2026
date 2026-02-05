@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Maps | VKU Smart Vehicle</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="header-bar">
+    <div class="header-title">ACCIDENT DETECTION AND REPORTING SYSTEM</div>
+    <div class="header-right">
+      <div class="header-search"><input type="text" placeholder="Search.."></div>
+      <div class="header-icon"></div>
+    </div>
+  </header>
+
+  <div class="body-row">
+    <aside class="sidebar">
+      <div class="sidebar-logo">MENU</div>
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="history.html">Accident & Theft History</a></li>
+        <li><a href="maps.html" class="active">Google Maps</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <div class="page-title">Google Maps</div>
+      <div class="page-subtitle">
+        Vị trí hiện tại: <span id="gps-lat">--</span>, <span id="gps-lng">--</span>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Accident Location / Vehicle Position</div>
+        <div id="map" class="map-box"></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="maps.js"></script>
+</body>
+</html>

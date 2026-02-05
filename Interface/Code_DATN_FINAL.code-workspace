@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Users/dohuuhieu/moto-backend"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../Users/dohuuhieu/Documents/Đồ án TN_Code/Moto_Accident_Lost"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "api"
+	}
+}

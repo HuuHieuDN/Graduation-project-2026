@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Accident & Theft History | VKU Smart Vehicle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="header-bar">
+    <div class="header-title">ACCIDENT DETECTION AND REPORTING SYSTEM</div>
+    <div class="header-right">
+      <div class="header-search"><input type="text" placeholder="Search.."></div>
+      <div class="header-icon"></div>
+    </div>
+  </header>
+
+  <div class="body-row">
+    <aside class="sidebar">
+      <div class="sidebar-logo">MENU</div>
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="history.html" class="active">Accident & Theft History</a></li>
+        <li><a href="maps.html">Google Maps</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <div class="page-title">Accident & Theft History</div>
+      <div class="page-subtitle">Nhật ký các lần tai nạn và cảnh báo mất trộm của thiết bị.</div>
+
+      <div class="card">
+        <div class="card-header">Recent Accident & Theft Notifications</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Thời gian</th>
+                <th>Loại</th>
+                <th>Vị trí (lat, lng)</th>
+                <th>Ghi chú</th>
+              </tr>
+            </thead>
+            <tbody id="history-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="history.js"></script>
+</body>
+</html>
