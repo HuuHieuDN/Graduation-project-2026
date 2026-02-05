@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard | VKU Smart Vehicle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="header-bar">
+<div class="header-title">ACCIDENT DETECTION AND REPORTING SYSTEM</div>
+<div class="header-right">
+<div class="header-search"><input type="text" placeholder="Search.."></div>
+<div class="header-icon"></div>
+</div>
+</header>
+
+
+<div class="body-row">
+<aside class="sidebar">
+<div class="sidebar-logo">MENU</div>
+<ul class="sidebar-menu">
+<li><a href="dashboard.html" class="active">Dashboard</a></li>
+<li><a href="history.html">Accident & Theft History</a></li>
+<li><a href="maps.html">Google Maps</a></li>
+</ul>
+
+
+<!-- THÊM UI: block cuối sidebar cho đỡ trống -->
+<div class="sidebar-footer">
+<div class="sidebar-footer-title">Quick info</div>
+<div class="sidebar-footer-item">Tip: Xem lịch sử tại “Accident & Theft History”.</div>
+<div class="sidebar-footer-item">Map: theo dõi vị trí tại “Google Maps”.</div>
+</div>
+</aside>
+
+
+<main class="main">
+<div class="page-title">Dashboard</div>
+<div class="page-subtitle">
+Thiết bị: <span id="device-id">--</span> · Cập nhật: <span id="last-update">--</span>
+</div>
+
+
+<!-- CARD CHÍNH (giữ nguyên id backend) -->
+<div class="card">
+<div class="card-header">Trạng thái Hệ thống</div>
+
+
+<div class="status-row">
+<span class="status-label">Chế độ chống trộm</span>
+<span class="status-value">
+<span id="antitheft-badge" class="badge badge-neutral">ĐANG TẮT</span>
+</span>
+</div>
+
+
+<div class="status-row">
+<span class="status-label">Trạng thái tai nạn</span>
+<span class="status-value">
+<span id="device-status-badge" class="badge badge-safe">AN TOÀN</span>
+</span>
+</div>
+
+
+<div class="status-row">
+<span class="status-label">Gia tốc hiện tại</span>
+<span class="status-value" id="acc-total">0.00 g</span>
+</div>
+
+
+<div class="status-row">
+<span class="status-label">Độ nghiêng thân xe </span>
+<span class="status-value" id="angle-y">0.0°</span>
+</div>
+
+
+
+
+<div class="status-row">
+<span class="status-label">Trạng thái SIM</span>
+<span class="status-value" id="sim-status">SẴN SÀNG</span>
+</div>
+
+
+<div class="status-row">
+<span class="status-label">Vị trí GPS</span>
+<span class="status-value" id="gps-sats">0</span>
+</div>
+
+
+<!-- NÚT CHỐNG TRỘM (giữ nguyên id) -->
+<div class="antitheft-actions">
+<button id="btn-antitheft-on">BẬT CHỐNG TRỘM</button>
+<button id="btn-antitheft-off">TẮT CHỐNG TRỘM</button>
+</div>
+
+
+<!-- GIỮ NGUYÊN SCRIPT -->
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<script src="dashboard_mqtt.js"></script>
+</div>
+
+
+<!-- THÊM UI: KHU VỰC DƯỚI CHO ĐỠ TRỐNG -->
+<div class="section-gap"></div>
+
+
+<div class="grid-3">
+<div class="card">
+<div class="card-header">Tóm tắt nhanh</div>
+
+
+<div class="mini-grid">
+<div class="mini-stat">
+<div class="mini-label">Trạng thái</div>
+<div class="mini-value">Realtime</div>
+</div>
+<div class="mini-stat">
+<div class="mini-label">Cập nhật</div>
+<div class="mini-value">3s/lần</div>
+</div>
+<div class="mini-stat">
+<div class="mini-label">Anti-theft</div>
+<div class="mini-value">Tùy chọn</div>
+</div>
+<div class="mini-stat">
+<div class="mini-label">GPS</div>
+<div class="mini-value">Theo dõi</div>
+</div>
+</div>
+
+
+<div class="hint">
+Gợi ý: nếu số liệu “0.00” kéo dài, kiểm tra nguồn cấp dữ liệu hoặc kết nối thiết bị.
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header">Hướng dẫn nhanh</div>
+<div class="guide-list">
+<div class="guide-item"><span class="dot dot-green"></span>Nút xanh: Bật chống trộm.</div>
+<div class="guide-item"><span class="dot dot-red"></span>Nút đỏ: Tắt chống trộm.</div>
+<div class="guide-item"><span class="dot dot-blue"></span>History: xem các sự kiện tai nạn/chống trộm.</div>
+<div class="guide-item"><span class="dot dot-gray"></span>Maps: xem vị trí thiết bị.</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header">Liên kết nhanh</div>
+<div class="quick-links">
+<a class="quick-link" href="history.html">Mở History</a>
+<a class="quick-link" href="maps.html">Mở Google Maps</a>
+</div>
+
+
+<div class="hint" style="margin-top:10px;">
+</div>
+</div>
+</div>
+
+
+<div class="section-gap"></div>
+
+
+<footer class="footer">
+VKU Smart Vehicle • Copyright by Do Huu Hieu • © 2025
+</footer>
+</main>
+</div>
+</div>
+
+
+<script src="dashboard.js"></script>
+</body>
+</html>
